@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "617028003628",
+    "firebase_url": "https://autecla-c6a80.firebaseio.com",
+    "project_id": "autecla-c6a80",
+    "storage_bucket": "autecla-c6a80.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617028003628:android:1322b4c06957e273",
+        "android_client_info": {
+          "package_name": "com.lincs.mobcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617028003628-v2gnpo2vqcld25185ets5557ro7irvl8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBy5SkFkuIk0pU9T2PhKZlvpgbP8sfPGQo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayoutSintoma"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/cardview_vertical_margin"
+    android:layout_marginTop="@dimen/cardview_vertical_margin"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:src="@drawable/ic_play_arrow_blue_24dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8.5">
+
+            <TextView
+                android:id="@+id/activity_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estimulação Visual" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

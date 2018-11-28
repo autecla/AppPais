@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="?colorPrimary"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_video_library_white_new"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/titulo_dialog_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:text="@string/atividade"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/progressBarHolder"
+        android:animateLayoutChanges="true"
+        android:visibility="visible"
+        android:alpha="1"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nome" />
+
+                <TextView
+                    android:id="@+id/tipo_dialog_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/_10_00"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/data" />
+
+                <EditText
+                    android:id="@+id/date_dialog_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:drawableLeft="@drawable/ic_date_range_black_new"
+                    android:editable="false"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:gravity="left|center"
+                    android:drawablePadding="8dp"
+                    android:text="@string/_23_02_2017"
+                    android:drawableStart="@drawable/ic_date_range_black_new"
+                    tools:ignore="RtlHardcoded" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/hora" />
+
+                <EditText
+                    android:id="@+id/time_dialog_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:drawableLeft="@drawable/ic_timer_black_new"
+                    android:editable="false"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:gravity="left|center"
+                    android:drawablePadding="8dp"
+                    android:text="@string/_10_00"
+                    android:drawableStart="@drawable/ic_timer_black_new"
+                    tools:ignore="RtlHardcoded" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="left|center"
+                    android:text="@string/coment_rio"
+                    tools:ignore="RtlHardcoded" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/informacao_dialog_edit"
+                    android:visibility="visible"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:id="@+id/comentar_dialog_edit"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/ic_textsms_blue_new"
+                            android:contentDescription="@string/todo" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/texto"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:id="@+id/icone_gravar_audio_dialog_edit"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/ic_mic_blue_new"
+                            android:contentDescription="@string/todo" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/udio"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:id="@+id/icone_gravar_video_dialog_edit"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/ic_videocam_blue_new"
+                            android:contentDescription="@string/todo" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/v_deo"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/informação_comentario_dialog_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:theme="@style/AppTheme"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/comentario_dialog_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"/>
+
+                    <ImageView
+                        android:id="@+id/icone_cancelar"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_cancel_blue_24dp"
+                        android:visibility="visible"
+                        android:contentDescription="@string/todo" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/informacao_audio_dialog_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/gravar_audio_dialog_edit"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentTop="true"
+                        android:src="@mipmap/ic_mic_blue_new"
+                        android:visibility="visible"
+                        android:contentDescription="@string/todo" />
+
+                    <TextView
+                        android:id="@+id/nome_audio_dialog_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/gravar_audio_dialog_edit"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/gravar_audio_dialog_edit"
+                        android:gravity="center_vertical"
+                        android:text="@string/pressione_para_gravar"
+                        android:layout_marginLeft="8dp"
+                        android:visibility="visible"
+                        android:layout_toEndOf="@+id/gravar_audio_dialog_edit"
+                        android:layout_marginStart="8dp" />
+
+                    <ImageView
+                        android:id="@+id/reproduzir_audio_dialog_edit"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_below="@+id/gravar_audio_dialog_edit"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_play_arrow_blue_24dp"
+                        android:visibility="visible"
+                        android:contentDescription="@string/todo" />
+
+                    <ImageView
+                        android:id="@+id/icone_cancelar_audio"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignLeft="@+id/nome_audio_dialog_edit"
+                        android:layout_alignRight="@+id/nome_audio_dialog_edit"
+                        android:layout_alignBottom="@id/reproduzir_audio_dialog_edit"
+                        android:layout_alignTop="@id/reproduzir_audio_dialog_edit"
+                        android:layout_below="@+id/nome_audio_dialog_edit"
+                        android:layout_toRightOf="@+id/reproduzir_audio_dialog_edit"
+                        android:src="@drawable/ic_cancel_blue_24dp"
+                        android:visibility="visible"
+                        android:contentDescription="@string/todo"
+                        android:layout_toEndOf="@+id/reproduzir_audio_dialog_edit"
+                        android:layout_alignStart="@+id/nome_audio_dialog_edit"
+                        android:layout_alignEnd="@+id/nome_audio_dialog_edit" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:id="@+id/informacao_video_dialog_edit"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/gravar_video_dialog_edit"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@mipmap/ic_videocam_blue_new"
+                        android:layout_marginTop="8dp"
+                        android:visibility="visible"
+                        android:contentDescription="@string/todo" />
+
+                    <TextView
+                        android:id="@+id/nome_video_dialog_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aperte_para_filmar"
+                        android:layout_alignTop="@id/gravar_video_dialog_edit"
+                        android:layout_alignBottom="@id/gravar_video_dialog_edit"
+                        android:gravity="center_vertical"
+                        android:layout_toRightOf="@id/gravar_video_dialog_edit"
+                        android:layout_marginLeft="8dp"
+                        android:visibility="visible"
+                        android:layout_toEndOf="@id/gravar_video_dialog_edit"
+                        android:layout_marginStart="8dp" />
+
+                    <ImageView
+                        android:id="@+id/reproduzir_video_dialog_edit"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_play_arrow_blue_24dp"
+                        android:layout_below="@id/gravar_video_dialog_edit"
+                        android:layout_marginTop="8dp"
+                        android:visibility="visible"
+                        android:contentDescription="@string/todo" />
+
+                    <ImageView
+                        android:id="@+id/icone_cancelar_video"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_cancel_blue_24dp"
+                        android:layout_below="@id/nome_video_dialog_edit"
+                        android:layout_alignLeft="@id/nome_video_dialog_edit"
+                        android:layout_alignRight="@id/nome_video_dialog_edit"
+                        android:layout_alignBottom="@id/reproduzir_video_dialog_edit"
+                        android:layout_alignTop="@id/reproduzir_video_dialog_edit"
+                        android:visibility="visible"
+                        android:contentDescription="@string/todo"
+                        android:layout_alignStart="@id/nome_video_dialog_edit"
+                        android:layout_alignEnd="@id/nome_video_dialog_edit" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <Button
+                    android:id="@+id/btn_cancelar_dialog_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@null"
+                    android:text="@string/cancelar"
+                    android:textColor="?colorPrimaryDark"
+                    android:layout_alignParentStart="true" />
+
+                <Button
+                    android:id="@+id/btn_salvar_dialog_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:text="@string/salvar"
+                    android:textColor="?colorPrimaryDark"
+                    android:layout_alignParentEnd="true"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

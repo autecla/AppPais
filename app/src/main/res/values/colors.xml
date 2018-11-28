@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#9ab5fb</color>-->
+    <!--<color name="colorPrimaryDark">#6f8ef3</color>-->
+    <!--<color name="colorAccent">#c1766b</color>-->
+
+    <color name="grey500">#9E9E9E</color>
+
+    <color name="cyan_300">#4DD0E1</color>
+    <color name="cyan_500">#00BCD4</color>
+    <color name="cyan_700">#0097A7</color>
+
+    <color name="orange_a200">#FFAB40</color>
+    <color name="white">#ffffff</color>
+
+    <color name="red">#ee0400</color>
+
+    <color name="colorSintomaChoro">#e3f2fd</color>
+    <color name="colorSintomaAlimentacao">#FFD4BA</color>
+    <color name="colorSintomaVomito">#F1F9CA</color>
+    <color name="colorSintomaAgressividade">#AFF0FF</color>
+    <color name="colorSintomaConvulsao">#89B2FF</color>
+    <color name="colorSintomaDoenca">#D2AFED</color>
+    <color name="colorSintomaTrocadeMedicacao">#A5DBFF</color>
+    <color name="colorSintomaOutro">#696969</color>
+
+    <color name="colorPrimaryLight">#E0F2F1</color>
+    <color name="common_action_bar_splitter">#E0F2F1</color>
+</resources>

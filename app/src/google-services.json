@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "437127853773",
+    "firebase_url": "https://mobcare-a8a8c.firebaseio.com",
+    "project_id": "mobcare-a8a8c",
+    "storage_bucket": "mobcare-a8a8c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437127853773:android:1322b4c06957e273",
+        "android_client_info": {
+          "package_name": "com.lincs.mobcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437127853773-cjgakui9krm63bql5u15nrb1rfuv5806.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAT0VNQJuxQ4O4zjYfVkvrquXSsb4EY2Bk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

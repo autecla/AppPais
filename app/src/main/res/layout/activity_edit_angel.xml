@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".authentication.signup.SignUpAngelActivity">
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@android:color/white">
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/toolbar" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/thumbnail_edit_anjo"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:src="@drawable/ic_add_a_photo_black_24dp"
+                    android:focusable="true"
+                    android:contentDescription="@string/todo"/>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_child_care_new"
+                    android:drawablePadding="16dp"
+                    android:ems="10"
+                    android:hint="@string/hint_nome_anjo"
+                    android:inputType="textCapWords"
+                    android:text="Matheus Henrique"
+                    android:drawableStart="@mipmap/ic_child_care_new" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/dateTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_cake_new"
+                    android:drawablePadding="16dp"
+                    android:ems="10"
+                    android:hint="Data de Nascimento"
+                    android:text="25/07/2016"
+                    android:drawableStart="@mipmap/ic_cake_new" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp">
+                <EditText
+                    android:id="@+id/angel_city1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:ems="10"
+                    android:hint="@string/cidade"
+                    android:text="Cidade"
+                    android:drawableLeft="@drawable/ic_city"
+                    android:drawableStart="@drawable/ic_city"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_sexo"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@mipmap/ic_gender_male_female_new" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="16dp">
+
+                    <RadioButton
+                        android:id="@+id/radio_pirates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/female" />
+
+                    <RadioButton
+                        android:id="@+id/radio_ninjas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:checked="true"
+                        android:text="@string/male"
+                        android:layout_marginStart="16dp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin">
+
+                <Button
+                    android:id="@+id/btn_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_retangle_blue"
+                    android:text="@string/salvar"
+                    android:textColor="@android:color/white" />
+
+            </FrameLayout>
+    </LinearLayout>
+   </ScrollView>
+</FrameLayout>

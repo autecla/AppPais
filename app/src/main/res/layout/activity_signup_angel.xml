@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".authentication.signup.SignUpAngelActivity">
+
+    <include layout="@layout/toolbar"/>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/progressBarHolderSingIn"
+        android:animateLayoutChanges="true"
+        android:visibility="visible"
+        android:alpha="1"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:id="@+id/progressBarSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/thumbnail_anjo"
+                android:layout_width="88dp"
+                android:layout_height="85dp"
+                android:layout_marginTop="10dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:src="@drawable/ic_add_a_photo_black_24dp"
+                android:focusable="true"
+                android:contentDescription="@string/todo"/>
+
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/ic_child_care_new"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="@string/hint_nome_anjo"
+                android:inputType="textCapWords"
+                android:drawableStart="@mipmap/ic_child_care_new" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+
+            <EditText
+                android:id="@+id/dateTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/ic_cake_new"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="@string/data_de_nascimento"
+                android:drawableStart="@mipmap/ic_cake_new"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+            <EditText
+                android:id="@+id/angel_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:ems="10"
+                android:hint="@string/cidade"
+                android:drawableLeft="@drawable/ic_city"
+                android:drawableStart="@drawable/ic_city"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/prontuarioTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_content_paste_black_24dp"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="@string/n_prontu_rio"
+                android:inputType="number"
+                android:drawableStart="@drawable/ic_content_paste_black_24dp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_sexo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@mipmap/ic_gender_male_female_new"
+                android:contentDescription="@string/todo" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:orientation="horizontal"
+                android:layout_marginStart="16dp">
+
+                <RadioButton
+                    android:id="@+id/radio_pirates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/female" />
+
+                <RadioButton
+                    android:id="@+id/radio_ninjas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/male"
+                    android:layout_marginStart="16dp" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <FrameLayout
+                android:id="@+id/frame_btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+
+                <Button
+                    android:id="@+id/btn_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_retangle_blue"
+                    android:text="@string/next"
+                    android:textColor="@color/mdtp_white" />
+        </FrameLayout>
+
+    </LinearLayout>
+    </FrameLayout>
+</ScrollView>
+</LinearLayout>

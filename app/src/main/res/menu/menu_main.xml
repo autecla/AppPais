@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<item-->
+        <!--android:id="@+id/miWhatsapp"-->
+        <!--android:icon="@drawable/ic_whatsapp_white_24dp"-->
+        <!--android:title="Whatsapp"-->
+        <!--app:showAsAction="always"></item>-->
+
+    <item
+        android:id="@+id/miOptions"
+        android:icon="@drawable/ic_more_vert"
+        android:title="Options"
+        app:showAsAction="always"></item>
+
+    <!--<item-->
+        <!--android:id="@+id/miNotice"-->
+        <!--android:icon="@drawable/ic_announcement_white_24dp"-->
+        <!--android:title="Perfil"-->
+        <!--app:showAsAction="ifRoom"></item>-->
+</menu>

@@ -1,0 +1,162 @@
+<resources>
+    <string name="app_name">AuTecla</string>
+    <string name="achievements">Conquistas</string>
+    <string name="activity_notice">Avisos</string>
+
+    <string name="comportamento_alimentacao">Alimentação</string>
+    <string name="o_que_aconteceu">O que aconteceu?</string>
+    <string name="comportamento_sono">Sono</string>
+    <string name="comportamento_mudanca">Troca\n de \nMedicação</string>
+    <string name="comportamento_doenca">Doença</string>
+    <string name="comportamento_agressividade">Agressividade</string>
+
+    <string name="extra_title">title</string>
+    <string name="extra_goal">goal</string>
+    <string name="extra_qtd">qtd</string>
+
+    <string name="hint_nome_anjo">Nome do Anjo</string>
+    <string name="next">Avançar</string>
+    <string name="faco_parte">Eu já sou da FAV</string>
+    <string name="female">Feminino</string>
+    <string name="male">Masculino</string>
+    <string name="numero_prontuario">Número do Prontuário</string>
+    <string name="recuperar">Recuperar Cadastro</string>
+    <string name="hint_nome_acompanhante">Nome do Acompanhante</string>
+    <string name="hint_telefone">Telefone</string>
+
+    <string name="sintoma_febre">Alimentacao</string>
+    <string name="sintoma_vomito">Sono</string>
+    <string name="sintoma_choro">Choro Contínuo</string>
+    <string name="sintoma_convulsao">Convulsão</string>
+    <string name="sintoma_gripe">Troca de Medicacao</string>
+    <string name="sintoma_agressividade">Agressividade</string>
+    <string name="sintoma_doenca">Doenca</string>
+    <string name="outros">Outros</string>
+
+    <string name="atividade_1">Atividade 1</string>
+    <string-array name="sexo_array">
+        <item>Feminino</item>
+        <item>Masculino</item>
+    </string-array>
+    <string-array name="family_array">
+        <item>Mãe</item>
+        <item>Pai</item>
+        <item>Avô</item>
+        <item>Avó</item>
+        <item>Irmão</item>
+        <item>Irmã</item>
+        <item>Outro</item>
+    </string-array>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="player_error">Error initializing YouTube player</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
+
+    <string-array name="spinner_array">
+        <item>Sim</item>\
+        <item>Não</item>
+    </string-array>
+
+    <string name="editar">Editar</string>
+    <string name="fb_login_protocol_scheme">fb196526407597583</string>
+    <string name="phone_empty">(__) _____-____</string>
+    <string name="maria">Maria</string>
+    <string name="dados_do_acompanhante">Dados do acompanhante</string>
+    <string name="masculino">Masculino</string>
+    <string name="sexo">Sexo:</string>
+    <string name="idade_vazio">6 Meses</string>
+    <string name="idade_label">Idade:</string>
+    <string name="foo_name">Matheus Henrique Silva</string>
+    <string name="change_password">Mudar senha</string>
+    <string name="logout">Sair</string>
+    <string name="cidade">Cidade</string>
+    <string name="data_de_nascimento">Data de Nascimento</string>
+    <string name="objetivo">Objetivo</string>
+    <string name="nome_da_atividade">Nome da atividade</string>
+    <string name="todo">TODO</string>
+    <string name="texto">Texto</string>
+    <string name="v_deo">Vídeo</string>
+    <string name="pressione_para_gravar">Pressione para gravar</string>
+    <string name="aperte_para_filmar">Aperte para filmar</string>
+    <string name="a_estimula_o_foi_feita_hoje">A estimulação foi feita hoje?</string>
+    <string name="sim">Sim</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="comentar">Comentar</string>
+    <string name="a_atividade_j_foi_feita">A atividade já foi feita?</string>
+    <string name="atividade">Atividade</string>
+    <string name="voc_j_realizou_as_atividades_hoje">Você já realizou as atividades hoje?</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="remover">REMOVER</string>
+    <string name="editar_rotina">Editar</string>
+    <string name="descri_o">Descrição</string>
+    <string name="titulo">Título</string>
+    <string name="criar_a_tela">Criar a tela de editar e visualizar (sintomas/atividades) Criar a iteração para editar e remover sintomas e atividades (longclick) Colocar o na cor azul que está sendo usada Colocar o botão de voltar no padrão branco</string>
+    <string name="informa_es">Informações</string>
+    <string name="dados_gerais">Dados Gerais:</string>
+    <string name="nome">Nome</string>
+    <string name="fechar">FECHAR</string>
+    <string name="prescri_o_de_culos">Prescrição de óculos:</string>
+    <string name="tipo_de_oclus_o">Tipo de oclusão:</string>
+    <string name="funcionalidade_visual">Funcionalidade Visual:</string>
+    <string name="nistagmo">Nistagmo:</string>
+    <string name="oclus_o">Oclusão:</string>
+    <string name="estrabismo">Estrabismo:</string>
+    <string name="av_oe">AV OE:</string>
+    <string name="av_od">AV OD:</string>
+    <string name="av_ao">AV AO:</string>
+    <string name="dados_oftalmol_gicos">Dados oftalmológicos:</string>
+    <string name="dadosterapeuticos">Dados Terapêuticos:</string>
+    <string name="equipemedica">Equipe Terapêutica:</string>
+
+    <string name="n_o">NÃO</string>
+    <string name="convuls_es">Convulsões</string>
+    <string name="to_ev_motor">TO EV Motor</string>
+    <string name="terapias">Terapias</string>
+    <string name="_01_01_1970">01/01/1970</string>
+    <string name="_1_consulta_na_fav">1ª consulta na FAV</string>
+    <string name="xxxxxxxxxx">XXXXXXXXXX</string>
+    <string name="cart_o_do_sus">Cartão do SUS</string>
+    <string name="n_prontu_rio">Nº Prontuário</string>
+    <string name="_25_07_2016">25/07/2016</string>
+    <string name="recife">Recife</string>
+    <string name="que_dia_aconteceu">Que dia aconteceu?</string>
+    <string name="_23_02_2017">23/02/2017</string>
+    <string name="que_horas_aconteceu">Que horas aconteceu?</string>
+    <string name="_10_00">10:00</string>
+    <string name="deseja_enviar_mais_informa_es">Deseja enviar mais informações?</string>
+    <string name="udio">Áudio</string>
+    <string name="enviar">ENVIAR</string>
+    <string name="autecla_perfil">AuTecla</string>
+    <string name="coment_rio">Comentário</string>
+    <string name="hora">Hora</string>
+    <string name="data">Data</string>
+    <string name="senha_atual">Senha atual</string>
+    <string name="nova_senha">Nova senha</string>
+    <string name="confirma_o_de_senha">Confirmação de senha</string>
+    <string name="qual_foi_a_dura_o">Qual foi a duração?</string>
+    <string name="dados">Dados</string>
+    <string name="data_comentario">Data:</string>
+    <string name="hora_comentario">Horário:</string>
+    <string name="detalhes">Detalhes:</string>
+    <string name="_81_99999_9999">(81) 99999–9999</string>
+    <string name="maria_m_e">Maria (Mãe)</string>
+    <string name="acompanhante">Acompanhante</string>
+    <string name="_6_meses">6 Meses</string>
+    <string name="matheus_henrique">Matheus Henrique</string>
+    <string name="alimentacao">Alimentacao</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="logar_com">ou Logar com:</string>
+    <string name="criar_novo_cadastro">Criar novo cadastro</string>
+    <string name="entrar">Entrar</string>
+    <string name="dia_10">Dia 10</string>
+    <string name="comportamentos_informados">Comportamentos Informados</string>
+    <string name="atividades_executadas">Atividades Executadas</string>
+    <string name="choro_cont_nuo">Choro Contínuo</string>
+    <string name="salvar">Salvar</string>
+    <string name="reportar_sintoma">Reportar Sintoma</string>
+    <string name="reportar_comportamento">Reportar Comportamento</string>
+
+</resources>

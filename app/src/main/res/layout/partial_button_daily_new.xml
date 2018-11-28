@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.clans.fab.FloatingActionMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    fab:menu_colorNormal="?colorAccent">
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/menu_item_alimentacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_face_with_thermometer_24dp"
+        fab:fab_colorNormal="@color/colorSintomaAlimentacao"
+        fab:fab_label="@string/sintoma_febre"
+        fab:fab_size="normal" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/menu_item_sono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_emoji_vomito_24dp"
+        fab:fab_colorNormal="@color/colorSintomaVomito"
+        fab:fab_label="@string/sintoma_vomito"
+        fab:fab_size="normal" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/menu_item_choro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_emoji_choro_continuo_24dp"
+        fab:fab_colorNormal="@color/colorSintomaChoro"
+        fab:fab_label="@string/sintoma_choro"
+        fab:fab_size="normal" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/menu_item_agressividade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_emoji_espasmo_24dp"
+        fab:fab_colorNormal="@color/colorSintomaAgressividade"
+        fab:fab_label="@string/sintoma_convulsao"
+        fab:fab_size="normal" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/menu_item_mudanca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_emoji_gripe_24dp"
+        fab:fab_colorNormal="@color/colorSintomaTrocadeMedicacao"
+        fab:fab_label="@string/sintoma_gripe"
+        fab:fab_size="normal" />
+
+</com.github.clans.fab.FloatingActionMenu>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/cyan_500</item>
+        <item name="colorPrimaryDark">@color/cyan_700</item>
+        <item name="colorAccent">@color/orange_a200</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_back_white_24dp</item>
+    </style>
+
+</resources>

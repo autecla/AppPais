@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <FrameLayout
+        android:id="@+id/progressBarHolder"
+        android:animateLayoutChanges="true"
+        android:visibility="visible"
+        android:alpha="1"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/ll_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/logo_cetene" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/logo_fav" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_logo"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/logo_ufpe" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/logo_facepe" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

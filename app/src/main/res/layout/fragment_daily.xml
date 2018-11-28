@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FAFAFA">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvDaily"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="86dp" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <ImageButton
+            android:id="@+id/btn_report"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="24dp"
+            android:layout_marginRight="16dp"
+            android:background="@mipmap/ic_nova_anotacoes"
+            android:visibility="visible"
+            tools:ignore="RtlHardcoded"
+            android:contentDescription="@string/todo"/>
+
+    </FrameLayout>
+
+</FrameLayout>

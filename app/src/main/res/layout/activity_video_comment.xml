@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/alert_dialog_margin"
+    android:paddingRight="@dimen/alert_dialog_margin"
+    android:paddingTop="@dimen/alert_dialog_margin"
+    android:fillViewport="true"
+    android:theme="@style/AppTheme">
+
+    <LinearLayout
+        android:id="@+id/informacao_dialog_sintoma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/comentar_dialog_sintoma"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_textsms_blue_new"
+                android:contentDescription="@string/todo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/texto" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/icone_gravar_audio_dialog_sintoma"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_mic_blue_new"
+                android:contentDescription="@string/todo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/udio" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/icone_gravar_video_dialog_sintoma"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_videocam_blue_new" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Vídeo" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/informação_comentario_dialog_sintoma"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/comentario_dialog_sintoma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/icone_cancelar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_cancel_blue_24dp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/informacao_audio_dialog_sintoma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/gravar_audio_dialog_sintoma"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentTop="true"
+            android:src="@mipmap/ic_mic_blue_new"
+            android:visibility="visible"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/nome_audio_dialog_sintoma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/gravar_audio_dialog_sintoma"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/gravar_audio_dialog_sintoma"
+            android:gravity="center_vertical"
+            android:text="Pressione para gravar"
+            android:visibility="visible"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/gravar_audio_dialog_sintoma"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/reproduzir_audio_dialog_sintoma"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_below="@+id/gravar_audio_dialog_sintoma"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_play_arrow_blue_24dp"
+            android:visibility="visible"
+            android:contentDescription="@string/todo" />
+
+        <ImageView
+            android:id="@+id/icone_cancelar_audio"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignBottom="@id/reproduzir_audio_dialog_sintoma"
+            android:layout_alignLeft="@+id/nome_audio_dialog_sintoma"
+            android:layout_alignRight="@+id/nome_audio_dialog_sintoma"
+            android:layout_alignTop="@id/reproduzir_audio_dialog_sintoma"
+            android:layout_below="@+id/nome_audio_dialog_sintoma"
+            android:layout_toRightOf="@+id/reproduzir_audio_dialog_sintoma"
+            android:src="@drawable/ic_cancel_blue_24dp"
+            android:visibility="visible"
+            android:layout_alignStart="@+id/nome_audio_dialog_sintoma"
+            android:layout_alignEnd="@+id/nome_audio_dialog_sintoma"
+            android:layout_toEndOf="@+id/reproduzir_audio_dialog_sintoma"
+            android:contentDescription="@string/todo" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/informacao_video_dialog_sintoma"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/gravar_video_dialog_sintoma"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
+            android:src="@mipmap/ic_videocam_blue_new"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/nome_video_dialog_sintoma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/gravar_video_dialog_sintoma"
+            android:layout_alignTop="@id/gravar_video_dialog_sintoma"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/gravar_video_dialog_sintoma"
+            android:gravity="center_vertical"
+            android:text="Aperte para filmar"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/reproduzir_video_dialog_sintoma"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_below="@id/gravar_video_dialog_sintoma"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_play_arrow_blue_24dp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/icone_cancelar_video"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignBottom="@id/reproduzir_video_dialog_sintoma"
+            android:layout_alignLeft="@id/nome_video_dialog_sintoma"
+            android:layout_alignRight="@id/nome_video_dialog_sintoma"
+            android:layout_alignTop="@id/reproduzir_video_dialog_sintoma"
+            android:layout_below="@id/nome_video_dialog_sintoma"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_cancel_blue_24dp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</LinearLayout>

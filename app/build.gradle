@@ -1,0 +1,90 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.25.4'
+    }
+}
+apply plugin: 'com.android.application'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '28.0.2'
+    defaultConfig {
+        applicationId "com.lincs.mobcare"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true //important
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:mediarouter-v7:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    implementation "com.android.support:customtabs:27.1.1"
+    implementation "com.android.support:animated-vector-drawable:27.1.1"
+    implementation 'com.android.support:design:27.1.1'
+
+    // RecyclerView
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+
+    // FCM
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+    implementation 'com.google.firebase:firebase-core:15.0.2'
+    implementation 'com.google.firebase:firebase-auth:15.1.0'
+    implementation 'com.google.android.gms:play-services-auth:15.0.1'
+    implementation 'com.google.firebase:firebase-messaging:15.0.2'
+    implementation 'com.google.firebase:firebase-appindexing:15.0.1'
+    implementation 'com.google.firebase:firebase-database:15.0.1'
+    implementation 'com.google.firebase:firebase-storage:15.0.2'
+    implementation 'com.firebaseui:firebase-ui-database:2.1.1'
+    // MaterialDateTimePicker
+    implementation 'com.wdullaer:materialdatetimepicker:2.5.0'
+
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    // FloatinActionMenu on https://github.com/Clans/FloatingActionButton
+    implementation 'com.github.clans:fab:1.6.4'
+
+    //save object on sharedpreferences
+    implementation 'com.google.code.gson:gson:2.8.0'
+
+    //Exif
+    implementation 'com.android.support:exifinterface:27.1.1'
+
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.1@aar') {
+        transitive = true
+    }
+}
+
+// Firebase
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
+com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true

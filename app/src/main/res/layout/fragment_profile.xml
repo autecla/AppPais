@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Anjo -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_anjo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/cardview_horizontal_margin"
+            android:layout_marginRight="@dimen/cardview_horizontal_margin"
+            card_view:cardCornerRadius="0dp"
+            card_view:cardElevation="10dp"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_baby_profile"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:src="@drawable/ic_add_a_photo_black_24dp"
+                    android:focusable="true"
+                    android:contentDescription="@string/todo" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical"
+                    android:layout_marginStart="24dp">
+
+                    <TextView
+                        android:id="@+id/profile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="@string/matheus_henrique"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/profile_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_6_meses" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/edit_icon_angel"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:src="@drawable/ic_mode_edit_black_new"
+                    android:focusable="true"
+                    android:contentDescription="@string/todo" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/profile_sponsor_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/acompanhante"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+        <!-- Acompanhante -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_acompanhante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/cardview_horizontal_margin"
+            android:layout_marginRight="@dimen/cardview_horizontal_margin"
+            card_view:cardCornerRadius="0dp"
+            card_view:cardElevation="10dp"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_companion_profile"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:src="@drawable/ic_add_a_photo_black_24dp"
+                    android:focusable="true"
+                    android:contentDescription="@string/todo" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical"
+                    android:layout_marginStart="24dp">
+
+                    <TextView
+                        android:id="@+id/profile_sponsor_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="@string/maria_m_e"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/profile_sponsor_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_81_99999_9999" />
+                    <TextView
+                        android:id="@+id/companion_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/edit_icon_sponsor"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:src="@drawable/ic_mode_edit_black_new"
+                    android:focusable="true"
+                    android:contentDescription="@string/todo" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <ImageButton
+            android:id="@+id/btn_daily"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom|start"
+            android:padding="1dp"
+            android:background="@mipmap/ic_meu_diario"
+            android:layout_marginBottom="24dp"
+            android:layout_marginLeft="16dp"
+            android:visibility="visible"
+            android:contentDescription="@string/todo"
+            android:layout_marginStart="16dp" />
+
+
+        <ImageButton
+            android:id="@+id/btn_report"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="24dp"
+            android:layout_marginRight="16dp"
+            android:background="@mipmap/ic_nova_anotacoes"
+            android:visibility="visible"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/todo" />
+
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="?colorPrimary"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icon_angel"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/ic_anjo_new"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/titulo_dialog_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/informa_es"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+
+                <!--Dados Gerais-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:text="@string/dados_gerais" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/nome" />
+
+                    <TextView
+                        android:id="@+id/nome_info_angel_dialog"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/foo_name"
+                        android:textStyle="bold"
+                        android:layout_marginStart="8dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginEnd="20dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/cidade" />
+
+                        <TextView
+                            android:id="@+id/cidade_info_angel_dialog"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/recife"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginEnd="15dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/data_de_nascimento" />
+
+                        <TextView
+                            android:id="@+id/data_info_angel_dialog"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/_25_07_2016"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/sexo" />
+
+                        <TextView
+                            android:id="@+id/sexo_info_angel_dialog"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/masculino"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/n_prontu_rio" />
+
+                        <TextView
+                            android:id="@+id/prontuario_info_angel_dialog"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/xxxxxxxxxx"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginEnd="15dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/cart_o_do_sus" />
+
+                        <TextView
+                            android:id="@+id/cartao_sus_info_angel_dialog"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/xxxxxxxxxx"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/_1_consulta_na_fav" />
+
+                        <TextView
+                            android:id="@+id/consulta_fav_info_angel_dialog"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/_01_01_1970"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/convuls_es" />
+
+                        <TextView
+                            android:id="@+id/convulsao_info_angel_dialog"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/n_o"
+                            android:textStyle="bold"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Dados terapeuticos-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp">
+                <TextView
+                    android:id="@+id/dados_terapeuticos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/dadosterapeuticos" />
+
+                <TextView
+                    android:id="@+id/detail_terapeuticos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:layout_marginStart="8dp"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--Equipe Medica-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp">
+                <TextView
+                    android:id="@+id/equipe_medica"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/equipemedica" />
+
+                <TextView
+                    android:id="@+id/detail_medicas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:layout_marginStart="8dp"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+                <!--Btn fechar-->
+                <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/btn_fechar_info_angel_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:text="@string/fechar"
+                    android:gravity="center|right"
+                    android:textColor="?colorPrimaryDark"
+                    tools:ignore="RtlHardcoded" />
+
+            </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

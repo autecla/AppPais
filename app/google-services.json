@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "665628385773",
+    "firebase_url": "https://auteclaalfa.firebaseio.com",
+    "project_id": "auteclaalfa",
+    "storage_bucket": "auteclaalfa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:665628385773:android:a2be575c8c2144a1",
+        "android_client_info": {
+          "package_name": "com.lincs.mobcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "665628385773-l9vd8rsogp24jsnq9ampib5p33bb14bq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQEN7m-yvc3WFCklFC4gSJGcStdGrnDl4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

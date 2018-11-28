@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <FrameLayout
+        android:id="@+id/progressBarHolder"
+        android:animateLayoutChanges="true"
+        android:visibility="visible"
+        android:alpha="1"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/conjunto_logos_new"
+                    android:contentDescription="@string/todo" />
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_child_care_black_24dp"
+                    android:drawablePadding="16dp"
+                    android:ems="10"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:drawableStart="@drawable/ic_child_care_black_24dp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/etSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_lock_open_black_24dp"
+                    android:drawablePadding="16dp"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:hint="@string/senha"
+                    android:drawableStart="@drawable/ic_lock_open_black_24dp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp">
+                <TextView
+                    android:id="@+id/novoCadastro"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/criar_novo_cadastro"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp" />
+
+                <!--<TextView
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/logar_com"/>
+
+               <ImageView
+                    android:id="@+id/etGoogle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_google"
+                    android:contentDescription="@string/todo"/>-->
+
+
+            </LinearLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="8dp">
+
+                    <Button
+                        android:id="@+id/btn_recuperar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_retangle_blue"
+                        android:text="@string/entrar"
+                        android:textColor="@android:color/white" />
+
+                </FrameLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

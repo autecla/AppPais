@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/progressBarHolder"
+        android:animateLayoutChanges="true"
+        android:visibility="visible"
+        android:alpha="1"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+
+        <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipe_container_ev"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FAFAFA">
+            <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvEvolution"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="76dp"
+            android:paddingTop="24dp" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@null">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/voc_j_realizou_as_atividades_hoje"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_btn_evolution"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="24dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/shape_retangle_blue"
+            android:padding="1dp"
+            android:layout_marginEnd="16dp"
+            tools:ignore="RtlHardcoded">
+
+            <Button
+                android:id="@+id/btn_evolution_confirmar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_retangle"
+                android:enabled="false"
+                android:text="@string/confirmar"/>
+
+        </FrameLayout>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+</FrameLayout>
