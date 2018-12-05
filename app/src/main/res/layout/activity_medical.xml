@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/colorSintomaChoro"
+
         android:text="O número de acertos aparecerá aqui" />
 
     <Button
@@ -57,17 +58,22 @@
 
     <ListView
         android:id="@+id/listViewPaired"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_below="@+id/verde"
+        android:layout_width="294dp"
+        android:layout_height="254dp"
+        android:layout_below="@+id/azul"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginBottom="234dp"
-        android:background="@color/colorSintomaDoenca"
-        android:scrollbars="vertical"
-        android:visibility="visible">
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="34dp" />
 
-    </ListView>
+    <TextView
+        android:id="@+id/titleDispPareados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="249dp"
+        android:text="Dispositivos Pareados" />
+
 </RelativeLayout>

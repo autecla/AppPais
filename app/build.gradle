@@ -16,7 +16,7 @@ repositories {
 
 android {
     compileSdkVersion 27
-    buildToolsVersion '28.0.2'
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.lincs.mobcare"
         minSdkVersion 19
@@ -55,14 +55,16 @@ dependencies {
     implementation 'com.android.support:cardview-v7:27.1.1'
 
     // FCM
-    implementation 'com.google.firebase:firebase-core:16.0.4'
-    implementation 'com.google.firebase:firebase-core:15.0.2'
-    implementation 'com.google.firebase:firebase-auth:15.1.0'
-    implementation 'com.google.android.gms:play-services-auth:15.0.1'
-    implementation 'com.google.firebase:firebase-messaging:15.0.2'
-    implementation 'com.google.firebase:firebase-appindexing:15.0.1'
-    implementation 'com.google.firebase:firebase-database:15.0.1'
-    implementation 'com.google.firebase:firebase-storage:15.0.2'
+    implementation 'com.google.firebase:firebase-core:+'
+    implementation 'com.google.firebase:firebase-auth:+'
+    implementation 'com.google.android.gms:play-services-auth:+'
+    implementation 'com.google.firebase:firebase-messaging:+'
+    implementation 'com.google.firebase:firebase-appindexing:+'
+    implementation 'com.google.firebase:firebase-database:+'
+    implementation 'com.google.firebase:firebase-storage:+'
+    implementation 'com.google.firebase:firebase-core:+'
+    implementation 'com.google.firebase:firebase-messaging:+'
+
     implementation 'com.firebaseui:firebase-ui-database:2.1.1'
     // MaterialDateTimePicker
     implementation 'com.wdullaer:materialdatetimepicker:2.5.0'

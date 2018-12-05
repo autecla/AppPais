@@ -20,7 +20,7 @@
     <color name="colorSintomaVomito">#F1F9CA</color>
     <color name="colorSintomaAgressividade">#AFF0FF</color>
     <color name="colorSintomaConvulsao">#89B2FF</color>
-    <color name="colorSintomaDoenca">#D2AFED</color>
+    <color name="colorSintomaDoenca">#d2afed</color>
     <color name="colorSintomaTrocadeMedicacao">#A5DBFF</color>
     <color name="colorSintomaOutro">#696969</color>
 

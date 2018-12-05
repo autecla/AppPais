@@ -38,32 +38,41 @@ public class AtividadeCorFragment extends Fragment {
     private TextView status;
     private ListView pairedDevicesList;
     BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+    //BroadcastReceiver mReceiver;
 
      public AtividadeCorFragment() {
         // Required empty public constructor
     }
 
-    private void getPairedDevices() {
+
+
+    private void ListPairedDevices(ListView lv) {
         Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
         ArrayList<String> btList = new ArrayList<>();
+
         if (pairedDevices.size() > 0) {
             for (BluetoothDevice device : pairedDevices) {
-                status.append(device.getName() + "\n");
+               btList.add(device.getName() + "\n");
             }
         }
 
-
+        ArrayAdapter<String> adapterList = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, btList);
+        lv.setAdapter(adapterList);
     }
 
-    private void fillList() {
+
+    private void ScanDevices(ListView lv) {
         Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
         ArrayList<String> btList = new ArrayList<>();
-        for(int i=0; i<12; i++){
-            btList.add(Integer.toString(i));
-        }
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, btList);
-        pairedDevicesList.setAdapter(adapter);
 
+        if (pairedDevices.size() > 0) {
+            for (BluetoothDevice device : pairedDevices) {
+                btList.add(device.getName() + "\n");
+            }
+        }
+
+        ArrayAdapter<String> adapterList = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, btList);
+        lv.setAdapter(adapterList);
     }
 
     @Nullable
@@ -72,21 +81,13 @@ public class AtividadeCorFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.activity_medical, container, false);
 
-
-
         Button vermelho, amarelo, verde, azul;
 
         status = view.findViewById(R.id.textMessage);
-
-        String[] menuItems = {"Do something", "Why is not working\n"};
         ListView lv = (ListView) view.findViewById(R.id.listViewPaired);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, menuItems);
-        lv.setAdapter(adapter);
 
 
-        adapter.notifyDataSetChanged();
 
-/*
         vermelho = view.findViewById(R.id.vermelho);
         amarelo = view.findViewById(R.id.amarelo);
         verde = view.findViewById(R.id.verde);
@@ -102,12 +103,8 @@ public class AtividadeCorFragment extends Fragment {
         amarelo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                status.setText("AMARELO TOAST!");
-                if(getActivity().getApplicationContext() != null){
-                    status.setText("Attached to activity\n");
-                    Toast.makeText(getActivity(), "YEHAWWWW", Toast.LENGTH_LONG).show();
+                status.setText("AMARELO");
 
-                }
 
             }
         });
@@ -136,9 +133,12 @@ public class AtividadeCorFragment extends Fragment {
             Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
             discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
             startActivity(discoverableIntent);
+
         }
 
-        getPairedDevices(); */
+        ListPairedDevices(lv);
+
+
 
         return view;
     }
@@ -146,7 +146,6 @@ public class AtividadeCorFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
-
 
 
     }
