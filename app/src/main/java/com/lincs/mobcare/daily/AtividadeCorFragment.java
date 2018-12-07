@@ -23,6 +23,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -35,26 +36,76 @@ import com.lincs.mobcare.R;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.UUID;
 
 public class AtividadeCorFragment extends Fragment {
 
     private final static int REQUEST_ENABLE_BT = 1;
-    private static final int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 1;
-    private final String TAG = "Atividade Cor === ";
+    private final static int MY_PERMISSIONS_COARSE_LOCATION = 1;
+    private final static String TAG = "Atividade Cor === ";
+    private final static UUID MY_UUID_UNSECURE = UUID.fromString("a8dd6c1b-0908-42c8-b2ae-32133f068a0b ");
     private TextView message;
-    private ListView pairedDevicesList;
-    BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-    ArrayAdapter<String> adapterList;
-    ArrayList<String> scannedDevicesNames = new ArrayList<String>();
-    TextView bluetoothStatus;
-    public ListView lv;
+    private BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+    private ArrayAdapter<String> adapterList;
+    private ArrayList<String> scannedDevicesNames = new ArrayList<String>();
+    private TextView bluetoothStatus;
+    private ListView lv;
+
+    private Button vermelho, amarelo, verde, azul, scanB;
+
     //BroadcastReceiver mReceiver;
 
-     public AtividadeCorFragment() {
+    public AtividadeCorFragment() {
         // Required empty public constructor
     }
 
+    private void FindAllViews(View view){
 
+        vermelho = view.findViewById(R.id.vermelho);
+        amarelo = view.findViewById(R.id.amarelo);
+        verde = view.findViewById(R.id.verde);
+        azul = view.findViewById(R.id.azul);
+        scanB = view.findViewById(R.id.scanButton);
+
+        message = view.findViewById(R.id.textMessage);
+        bluetoothStatus = view.findViewById(R.id.titleDispPareados);
+        lv = (ListView) view.findViewById(R.id.listViewPaired);
+
+        return;
+    }
+
+    private void SetUpColorButtons(){
+
+        vermelho.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                message.setText("VERMELHO");
+            }
+        });
+
+        amarelo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                message.setText("AMARELO");
+            }
+        });
+
+        verde.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                message.setText("VERDE");
+            }
+        });
+
+        azul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                message.setText("AZUL");
+            }
+        });
+
+        return;
+    }
 
     private void ListPairedDevices(ListView lv) {
         Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
@@ -86,7 +137,7 @@ public class AtividadeCorFragment extends Fragment {
                 BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                 if(device.getName() != null) {
                     Log.d(TAG, device.getName());
-                    ScanDevices(device.getName());
+                    ScanDevices(device.getName() + ": " + device.getAddress());
                 }
                 else {
                     Log.d(TAG, "no name to show");
@@ -95,61 +146,41 @@ public class AtividadeCorFragment extends Fragment {
         }
     };
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        // Don't forget to unregister the ACTION_FOUND receiver.
+        getActivity().unregisterReceiver(bReciever);
+    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.activity_medical, container, false);
+        FindAllViews(view);
 
         ActivityCompat.requestPermissions(getActivity(),
                 new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
-                MY_PERMISSIONS_REQUEST_READ_CONTACTS);
+                MY_PERMISSIONS_COARSE_LOCATION);
 
 
-        Button vermelho, amarelo, verde, azul, scanB;
-
-        message = view.findViewById(R.id.textMessage);
-        bluetoothStatus = view.findViewById(R.id.titleDispPareados);
-        lv = (ListView) view.findViewById(R.id.listViewPaired);
-
-
-
-        vermelho = view.findViewById(R.id.vermelho);
-        amarelo = view.findViewById(R.id.amarelo);
-        verde = view.findViewById(R.id.verde);
-        azul = view.findViewById(R.id.azul);
-        scanB = view.findViewById(R.id.scanButton);
-
-
-
-        vermelho.setOnClickListener(new View.OnClickListener() {
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
-                message.setText("VERMELHO");
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+                Object obj = parent.getItemAtPosition(position);
+                String name = obj.toString();
+                message.setText(name);
+                mBluetoothAdapter.cancelDiscovery();
+
+
             }
         });
 
-        amarelo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                message.setText("AMARELO");
-            }
-        });
+        SetUpColorButtons();
 
-        verde.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                message.setText("VERDE");
-            }
-        });
-
-        azul.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                message.setText("AZUL");
-            }
-        });
 
         scanB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -184,8 +215,6 @@ public class AtividadeCorFragment extends Fragment {
 
         }
 
-        //ListPairedDevices(lv);
-
         return view;
     }
 
@@ -194,6 +223,8 @@ public class AtividadeCorFragment extends Fragment {
 
 
     }
+
+
 
 
 }
