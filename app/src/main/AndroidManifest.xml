@@ -10,8 +10,8 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VID" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <uses-feature
         android:name="android.hardware.camera2.full"
@@ -86,8 +86,8 @@
             android:name=".utils.AudioRecord"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
-
-        <activity android:name=".daily.AtividadeCorActivity"
+        <activity
+            android:name=".daily.AtividadeCorActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
 
@@ -138,7 +138,7 @@
             android:name="io.fabric.ApiKey"
             android:value="3b962e88170b258b0215cbfd59dde05b864858ab" />
 
-
+        <activity android:name=".utils.TesteFirebase"></activity>
     </application>
 
 </manifest>

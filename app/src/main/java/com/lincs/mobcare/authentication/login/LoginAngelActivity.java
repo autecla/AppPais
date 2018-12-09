@@ -36,6 +36,7 @@ import com.lincs.mobcare.authentication.signup.SignUpAngelActivity;
 import com.lincs.mobcare.authentication.signup.SignUpCompanionActivity;
 import com.lincs.mobcare.utils.Firebase;
 import com.lincs.mobcare.utils.Snapshot;
+import com.lincs.mobcare.utils.TesteFirebase;
 
 import java.util.Objects;
 
@@ -177,8 +178,10 @@ public class LoginAngelActivity extends AppCompatActivity {
                                 progressBar.setVisibility(View.GONE);
                                 getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
 
-                                //Intent intent = new Intent(LoginAngelActivity.this, SignUpAngelActivity.class);
-                                Intent intent = new Intent(LoginAngelActivity.this, MainActivity.class);
+                                Intent intent = new Intent(LoginAngelActivity.this, SignUpAngelActivity.class);
+                                //Intent intent = new Intent(LoginAngelActivity.this, MainActivity.class);
+                                //Intent intent = new Intent(LoginAngelActivity.this, TesteFirebase.class);
+
                                 startActivity(intent);
                                 finish();
                             }

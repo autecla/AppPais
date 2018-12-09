@@ -72,6 +72,9 @@ dependencies {
     //Picasso
     implementation 'com.squareup.picasso:picasso:2.5.2'
 
+    //RxBluetooth
+    implementation 'com.github.ivbaranov:rxbluetooth2:2.0.1'
+
     // FloatinActionMenu on https://github.com/Clans/FloatingActionButton
     implementation 'com.github.clans:fab:1.6.4'
 

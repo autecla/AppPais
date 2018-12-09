@@ -22,6 +22,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.github.ivbaranov.rxbluetooth.RxBluetooth;
 import com.lincs.mobcare.R;
 import com.lincs.mobcare.utils.BluetoothConnectionService;
 
@@ -83,7 +84,6 @@ public class AtividadeCorFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 message.setText("VERMELHO");
-                SendMessage();
             }
         });
 
@@ -91,7 +91,6 @@ public class AtividadeCorFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 message.setText("AMARELO");
-                SendMessage();
             }
         });
 
@@ -99,7 +98,6 @@ public class AtividadeCorFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 message.setText("VERDE");
-                SendMessage();
             }
         });
 
@@ -107,7 +105,6 @@ public class AtividadeCorFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 message.setText("AZUL");
-                SendMessage();
             }
         });
 
@@ -182,16 +179,22 @@ public class AtividadeCorFragment extends Fragment {
 
     public void startBTConnection(BluetoothDevice device, UUID uuid){
         Log.d(TAG, "startBTConnection: Initializing RFCOM Bluetooth Connection.");
-
         mConnectionService.startClient(device,uuid);
     }
+
+
     @Override
     public void onDestroy() {
         super.onDestroy();
 
         // Don't forget to unregister the ACTION_FOUND receiver.
-        getActivity().unregisterReceiver(scanBroadcastReceiver);
-        getActivity().unregisterReceiver(pairBroadcastReceiver);
+        try {
+            getActivity().unregisterReceiver(scanBroadcastReceiver);
+            getActivity().unregisterReceiver(pairBroadcastReceiver);
+        }catch (IllegalArgumentException e){
+
+        }
+
     }
 
     @Nullable
@@ -205,7 +208,7 @@ public class AtividadeCorFragment extends Fragment {
                 new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
                 MY_PERMISSIONS_COARSE_LOCATION);
 
-
+        RxBluetooth rxBluetooth = new RxBluetooth(getActivity()); // `this` is a context
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
@@ -223,7 +226,7 @@ public class AtividadeCorFragment extends Fragment {
                 chosenDevice = scannedDevices.get(position);
                 mConnectionService = new BluetoothConnectionService(getActivity());
 
-                startBTConnection(chosenDevice, MY_UUID_INSECURE);
+                startBTConnection(chosenDevice, chosenDevice.getUuids()[0].getUuid());
 
 
 
