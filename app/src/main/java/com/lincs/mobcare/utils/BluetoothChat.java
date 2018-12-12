@@ -146,6 +146,8 @@ public class BluetoothChat extends AppCompatActivity {
         dialog = new Dialog(this);
         dialog.setContentView(R.layout.bluetooth_chat);
         dialog.setTitle("Dispositivos Bluetooth");
+        Button btnCancel = (Button) dialog.findViewById(R.id.cancelButton);
+
 
         if (bluetoothAdapter.isDiscovering()) {
             bluetoothAdapter.cancelDiscovery();
@@ -208,6 +210,15 @@ public class BluetoothChat extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                dialog.dismiss();
+            }
+        });
+
 
         dialog.setOnKeyListener(new Dialog.OnKeyListener() {
 
