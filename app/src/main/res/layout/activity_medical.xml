@@ -22,7 +22,7 @@
         android:text="Verde" />
 
     <Button
-        android:id="@+id/azul"
+        android:id="@+id/btnAzul"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:layout_below="@+id/textMessage"
@@ -58,7 +58,7 @@
         android:id="@+id/listViewPaired"
         android:layout_width="294dp"
         android:layout_height="254dp"
-        android:layout_below="@+id/azul"
+        android:layout_below="@+id/btnAzul"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="33dp"

@@ -63,7 +63,7 @@ public class AtividadeCorFragment extends Fragment {
         vermelho = view.findViewById(R.id.vermelho);
         amarelo = view.findViewById(R.id.amarelo);
         verde = view.findViewById(R.id.verde);
-        azul = view.findViewById(R.id.azul);
+        azul = view.findViewById(R.id.btnAzul);
         scanB = view.findViewById(R.id.scanButton);
 
         message = view.findViewById(R.id.textMessage);

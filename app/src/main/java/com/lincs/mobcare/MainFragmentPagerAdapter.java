@@ -11,7 +11,7 @@ import com.lincs.mobcare.evolution.EvolutionFragment;
 import com.lincs.mobcare.notice.NoticeFragment;
 import com.lincs.mobcare.profile.ProfileFragment;
 import com.lincs.mobcare.scheduler.SchedulerFragment;
-import com.lincs.mobcare.daily.AtividadeCorFragment;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +26,7 @@ public class MainFragmentPagerAdapter extends FragmentPagerAdapter implements Ac
         fragments.add(new SchedulerFragment());
         fragments.add(new EvolutionFragment());
         fragments.add(new NoticeFragment());
-        fragments.add(new BTFragment());
+        fragments.add(new AtividadeFragment());
     }
 
     @Override

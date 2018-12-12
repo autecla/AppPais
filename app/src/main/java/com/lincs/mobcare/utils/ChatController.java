@@ -24,6 +24,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -32,7 +33,8 @@ import java.util.UUID;
 
 public class ChatController {
     private static final String APP_NAME = "BluetoothChatApp";
-    private static final UUID MY_UUID = UUID.fromString("8ce255c0-200a-11e0-ac64-0800200c9a66");
+    private static final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+    private static final String TAG = "Bluetooth Controller: ";
 
     private final BluetoothAdapter bluetoothAdapter;
     private final Handler handler;
@@ -49,6 +51,8 @@ public class ChatController {
     public ChatController(Context context, Handler handler) {
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         state = STATE_NONE;
+        Log.d(TAG, "ChatController: STATE_NONE");
+
 
         this.handler = handler;
     }
@@ -56,7 +60,6 @@ public class ChatController {
     // Set the current state of the chat connection
     private synchronized void setState(int state) {
         this.state = state;
-
         handler.obtainMessage(BluetoothChat.MESSAGE_STATE_CHANGE, state, -1).sendToTarget();
     }
 
@@ -94,6 +97,8 @@ public class ChatController {
                 connectThread.cancel();
                 connectThread = null;
             }
+            Log.d(TAG, "connect: STATE_CONNECTING");
+
         }
 
         // Cancel running thread
@@ -106,6 +111,8 @@ public class ChatController {
         connectThread = new ConnectThread(device);
         connectThread.start();
         setState(STATE_CONNECTING);
+        Log.d(TAG, "setState: STATE_CONNECTING");
+
     }
 
     // manage Bluetooth connection
@@ -139,6 +146,8 @@ public class ChatController {
         handler.sendMessage(msg);
 
         setState(STATE_CONNECTED);
+        Log.d(TAG, "setState: STATE_CONNECTED");
+
     }
 
     // stop all threads
@@ -158,6 +167,7 @@ public class ChatController {
             acceptThread = null;
         }
         setState(STATE_NONE);
+        Log.d(TAG, "stop: STATE_NONE");
     }
 
     public void write(byte[] out) {
@@ -224,11 +234,18 @@ public class ChatController {
                             case STATE_CONNECTING:
                                 // start the connected thread.
                                 connected(socket, socket.getRemoteDevice());
+                                Log.d(TAG, "connected: STATE_CONNECTING");
+
+
                                 break;
                             case STATE_NONE:
+                                Log.d(TAG, "run: STATE_NONE");
+
                             case STATE_CONNECTED:
                                 // Either not ready or already connected. Terminate
                                 // new socket.
+                                Log.d(TAG, "case: STATE_CONNECTED");
+
                                 try {
                                     socket.close();
                                 } catch (IOException e) {
@@ -278,6 +295,8 @@ public class ChatController {
                     socket.close();
                 } catch (IOException e2) {
                 }
+                Log.d(TAG, "ConnectThread run() Conection Failed");
+                Log.d(TAG, "Exception: " + e.getMessage());
                 connectionFailed();
                 return;
             }
@@ -333,6 +352,7 @@ public class ChatController {
                     // Send the obtained bytes to the UI Activity
                     handler.obtainMessage(BluetoothChat.MESSAGE_READ, bytes, -1,
                             buffer).sendToTarget();
+                    Log.d(TAG, "MESSAGE: " +    new String(buffer, 0, bytes));
                 } catch (IOException e) {
                     connectionLost();
                     // Start the service over to restart listening mode

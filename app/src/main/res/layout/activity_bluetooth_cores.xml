@@ -1,65 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="@dimen/activity_horizontal_margin"
     tools:context=".utils.BluetoothChat">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:orientation="vertical">
+    <Button
+        android:id="@+id/btnVerde"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/textMessage"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="Verde" />
 
-        <TextView
-            android:id="@+id/status"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Not Connected" />
+    <Button
+        android:id="@+id/btnAzul"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/textMessage"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:text="Azul" />
 
-        <Button
-            android:id="@+id/btn_connect"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Connect" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/btnAmarelo"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="143dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="Amarelo" />
+
+    <Button
+        android:id="@+id/btnVermelho"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="143dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:text="Vermelho" />
 
     <ListView
         android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.7" />
+        android:layout_width="294dp"
+        android:layout_height="254dp"
+        android:layout_below="@+id/btnAzul"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginEnd="33dp"
+        android:background="@color/colorSintomaChoro" />
 
+    <Button
+        android:id="@+id/btn_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnAzul"
+        android:layout_alignBottom="@+id/titleDispPareados"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="-73dp"
+        android:text="Começar" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.1"
-        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="168dp"
+        android:layout_height="39dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="97dp"
+        android:gravity="center"
+        android:text="Atividade das Cores"
+        android:textSize="18sp" />
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/input_layout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="0.8">
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_connect"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-105dp" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Input some text" />
-        </android.support.design.widget.TextInputLayout>
-
-        <Button
-            android:id="@+id/btn_send"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="0.2"
-            android:text="send" />
-    </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

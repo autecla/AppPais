@@ -35,7 +35,7 @@ import java.util.ArrayList;
 import java.util.Set;
 import java.util.UUID;
 
-public class BTFragment extends Fragment {
+public class AtividadeFragment extends Fragment {
 
     private static final String TAG = "BluetoothChat";
     private static final int MY_PERMISSIONS_COARSE_LOCATION = 1;
@@ -68,7 +68,7 @@ public class BTFragment extends Fragment {
 
     ListView lvNewDevices;
 
-        public BTFragment() {
+        public AtividadeFragment() {
             // Required empty public constructor
         }
 

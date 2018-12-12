@@ -6,6 +6,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
@@ -13,6 +14,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -23,15 +26,19 @@ import android.widget.Toast;
 
 import com.lincs.mobcare.R;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.Set;
 
 public class BluetoothChat extends AppCompatActivity {
 
-    private TextView status;
+    private static final String TAG = "BluetoothChat: ";
     private Button btnConnect;
+    private Button btnVermelho, btnAmarelo, btnVerde, btnAzul;
     private ListView listView;
     private Dialog dialog;
+    private TextView status;
     private TextInputLayout inputLayout;
     private ArrayAdapter<String> chatAdapter;
     private ArrayList<String> chatMessages;
@@ -67,6 +74,9 @@ public class BluetoothChat extends AppCompatActivity {
         btnConnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+                //discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
+                //startActivity(discoverableIntent);
                 showPrinterPickDialog();
             }
         });
@@ -87,14 +97,18 @@ public class BluetoothChat extends AppCompatActivity {
                         case ChatController.STATE_CONNECTED:
                             setStatus("Conectado a: " + connectingDevice.getName());
                             btnConnect.setEnabled(false);
+                            Log.d(TAG, "Conectado a: " + connectingDevice.getName());
                             break;
                         case ChatController.STATE_CONNECTING:
                             setStatus("Conectando...");
+                            Log.d(TAG, "Conectando a ... ");
                             btnConnect.setEnabled(false);
                             break;
                         case ChatController.STATE_LISTEN:
                         case ChatController.STATE_NONE:
                             setStatus("Sem conexão");
+                            Log.d(TAG, "nao foi");
+                            btnConnect.setEnabled(true);
                             break;
                     }
                     break;
@@ -102,15 +116,17 @@ public class BluetoothChat extends AppCompatActivity {
                     byte[] writeBuf = (byte[]) msg.obj;
 
                     String writeMessage = new String(writeBuf);
-                    chatMessages.add("Me: " + writeMessage);
+                    chatMessages.add("Enviado: " + writeMessage);
                     chatAdapter.notifyDataSetChanged();
                     break;
                 case MESSAGE_READ:
                     byte[] readBuf = (byte[]) msg.obj;
 
                     String readMessage = new String(readBuf, 0, msg.arg1);
-                    chatMessages.add(connectingDevice.getName() + ":  " + readMessage);
-                    chatAdapter.notifyDataSetChanged();
+                    if(readMessage.length() > 1 && !readMessage.equals(" ")) {
+                        chatMessages.add("Recebido:  " + readMessage);
+                        chatAdapter.notifyDataSetChanged();
+                    }
                     break;
                 case MESSAGE_DEVICE_OBJECT:
                     connectingDevice = msg.getData().getParcelable(DEVICE_OBJECT);
@@ -187,17 +203,23 @@ public class BluetoothChat extends AppCompatActivity {
                 bluetoothAdapter.cancelDiscovery();
                 String info = ((TextView) view).getText().toString();
                 String address = info.substring(info.length() - 17);
-
+                pairToDevice(address);
                 connectToDevice(address);
                 dialog.dismiss();
             }
         });
 
-        dialog.findViewById(R.id.cancelButton).setOnClickListener(new View.OnClickListener() {
+        dialog.setOnKeyListener(new Dialog.OnKeyListener() {
 
             @Override
-            public void onClick(View v) {
-                dialog.dismiss();
+            public boolean onKey(DialogInterface arg0, int keyCode,
+                                 KeyEvent event) {
+                // TODO Auto-generated method stub
+                if (keyCode == KeyEvent.KEYCODE_BACK) {
+                    finish();
+                    dialog.dismiss();
+                }
+                return true;
             }
         });
         dialog.setCancelable(false);
@@ -214,23 +236,52 @@ public class BluetoothChat extends AppCompatActivity {
         chatController.connect(device);
     }
 
-    private void findViewsByIds() {
-        status = (TextView) findViewById(R.id.status);
-        btnConnect = (Button) findViewById(R.id.btn_connect);
-        listView = (ListView) findViewById(R.id.list);
-        inputLayout = (TextInputLayout) findViewById(R.id.input_layout);
-        View btnSend = findViewById(R.id.btn_send);
+    private void pairToDevice(String deviceAddress) {
+        bluetoothAdapter.cancelDiscovery();
+        BluetoothDevice device = bluetoothAdapter.getRemoteDevice(deviceAddress);
+        Toast.makeText(this, "Bonding with: " + device.getName(), Toast.LENGTH_LONG).show();
 
-        btnSend.setOnClickListener(new View.OnClickListener() {
+        device.createBond();
+    }
+
+    private void findViewsByIds() {
+       //status = (TextView) findViewById(R.id.status);
+
+        btnConnect = (Button) findViewById(R.id.btn_connect);
+        btnVermelho = (Button) findViewById(R.id.btnVermelho);
+        btnAmarelo = (Button) findViewById(R.id.btnAmarelo);
+        btnAzul = (Button) findViewById(R.id.btnAzul);
+        btnVerde = (Button) findViewById(R.id.btnVerde);
+
+        listView = (ListView) findViewById(R.id.list);
+        status = (TextView) findViewById(R.id.status);
+
+
+        btnVermelho.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (inputLayout.getEditText().getText().toString().equals("")) {
-                    Toast.makeText(BluetoothChat.this, "Please input some texts", Toast.LENGTH_SHORT).show();
-                } else {
-                    //TODO: here
-                    sendMessage(inputLayout.getEditText().getText().toString());
-                    inputLayout.getEditText().setText("");
+                    sendMessage("vermelho\r\n");
                 }
+        });
+
+        btnAmarelo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendMessage("amarelo\r\n");
+            }
+        });
+
+        btnVerde.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendMessage("verde\r\n");
+            }
+        });
+
+        btnAzul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendMessage("azul\r\n");
             }
         });
     }
