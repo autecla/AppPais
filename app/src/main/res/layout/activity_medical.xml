@@ -9,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/colorSintomaChoro"
-
         android:text="O número de acertos aparecerá aqui" />
 
     <Button

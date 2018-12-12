@@ -179,7 +179,7 @@ public class AtividadeCorFragment extends Fragment {
 
     public void startBTConnection(BluetoothDevice device, UUID uuid){
         Log.d(TAG, "startBTConnection: Initializing RFCOM Bluetooth Connection.");
-        mConnectionService.startClient(device,uuid);
+        //mConnectionService.startClient(device,uuid);
     }
 
 
