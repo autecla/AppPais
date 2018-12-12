@@ -26,7 +26,7 @@ public class MainFragmentPagerAdapter extends FragmentPagerAdapter implements Ac
         fragments.add(new SchedulerFragment());
         fragments.add(new EvolutionFragment());
         fragments.add(new NoticeFragment());
-        fragments.add(new AtividadeCorFragment());
+        fragments.add(new BTFragment());
     }
 
     @Override

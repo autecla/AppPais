@@ -20,7 +20,7 @@ public class BluetoothConnectionService {
     private static final String appName = "AuTecla";
 
     private static final UUID MY_UUID_INSECURE =
-            UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+            UUID.fromString("8ce255c0-200a-11e0-ac64-0800200c9a66");
 
     private final BluetoothAdapter mBluetoothAdapter;
     Context mContext;
@@ -32,6 +32,7 @@ public class BluetoothConnectionService {
     private UUID deviceUUID;
 
     private ConnectedThread mConnectedThread;
+    public String incomingMessage;
 
     public BluetoothConnectionService(Context context) {
         mContext = context;
@@ -131,6 +132,9 @@ public class BluetoothConnectionService {
             }
 
             mmSocket = tmp;
+            if(mmSocket != null){
+                Log.d(TAG, "ConnectThread: socket OK");
+            }
 
             // Always cancel discovery because it will slow down a connection
             mBluetoothAdapter.cancelDiscovery();
@@ -241,7 +245,7 @@ public class BluetoothConnectionService {
                 // Read from the InputStream
                 try {
                     bytes = mmInStream.read(buffer);
-                    String incomingMessage = new String(buffer, 0, bytes);
+                    incomingMessage = new String(buffer, 0, bytes);
                     Log.d(TAG, "InputStream: " + incomingMessage);
                 } catch (IOException e) {
                     Log.e(TAG, "write: Error reading Input Stream. " + e.getMessage() );
@@ -291,6 +295,11 @@ public class BluetoothConnectionService {
         Log.d(TAG, "write: Write Called.");
         //perform the write
         mConnectedThread.write(out);
+    }
+
+    public String read(){
+        return incomingMessage;
+
     }
 
 

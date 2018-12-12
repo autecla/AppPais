@@ -159,4 +159,7 @@
     <string name="reportar_sintoma">Reportar Sintoma</string>
     <string name="reportar_comportamento">Reportar Comportamento</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
