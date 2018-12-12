@@ -85,16 +85,16 @@ public class BluetoothChat extends AppCompatActivity {
                 case MESSAGE_STATE_CHANGE:
                     switch (msg.arg1) {
                         case ChatController.STATE_CONNECTED:
-                            setStatus("Connected to: " + connectingDevice.getName());
+                            setStatus("Conectado a: " + connectingDevice.getName());
                             btnConnect.setEnabled(false);
                             break;
                         case ChatController.STATE_CONNECTING:
-                            setStatus("Connecting...");
+                            setStatus("Conectando...");
                             btnConnect.setEnabled(false);
                             break;
                         case ChatController.STATE_LISTEN:
                         case ChatController.STATE_NONE:
-                            setStatus("Not connected");
+                            setStatus("Sem conexão");
                             break;
                     }
                     break;
@@ -129,7 +129,7 @@ public class BluetoothChat extends AppCompatActivity {
     private void showPrinterPickDialog() {
         dialog = new Dialog(this);
         dialog.setContentView(R.layout.bluetooth_chat);
-        dialog.setTitle("Bluetooth Devices");
+        dialog.setTitle("Dispositivos Bluetooth");
 
         if (bluetoothAdapter.isDiscovering()) {
             bluetoothAdapter.cancelDiscovery();
@@ -249,7 +249,7 @@ public class BluetoothChat extends AppCompatActivity {
 
     private void sendMessage(String message) {
         if (chatController.getState() != ChatController.STATE_CONNECTED) {
-            Toast.makeText(this, "Connection was lost!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Conexão Perdida!", Toast.LENGTH_SHORT).show();
             return;
         }
 
