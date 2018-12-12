@@ -27,6 +27,7 @@ import android.widget.TextView;
 
 import com.github.ivbaranov.rxbluetooth.RxBluetooth;
 import com.lincs.mobcare.R;
+import com.lincs.mobcare.utils.BluetoothChat;
 import com.lincs.mobcare.utils.BluetoothConnectionService;
 
 import java.nio.charset.Charset;
@@ -233,7 +234,7 @@ public class BTFragment extends Fragment {
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
             View view = inflater.inflate(R.layout.bt_test_layout, container, false);
-            Button btnONOFF = (Button) view.findViewById(R.id.btnONOFF);
+          /*  Button btnONOFF = (Button) view.findViewById(R.id.btnONOFF);
             recMessage = (TextView) view.findViewById(R.id.bt_message) ;
             btnEnableDisable_Discoverable = (Button) view.findViewById(R.id.btnDiscoverable_on_off);
             btnDiscover = (Button) view.findViewById(R.id.btnFindUnpairedDevices);
@@ -367,7 +368,7 @@ public class BTFragment extends Fragment {
                     }
                 }
             });
-
+*/
             return view;
         }
 
@@ -430,7 +431,8 @@ public class BTFragment extends Fragment {
         @Override
         public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
 
-
+            Intent intent = new Intent(view.getContext(), BluetoothChat.class);
+            startActivity(intent);
         }
 
 
