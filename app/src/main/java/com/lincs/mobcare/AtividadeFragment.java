@@ -36,12 +36,14 @@ import java.util.Set;
 import java.util.UUID;
 
 public class AtividadeFragment extends Fragment {
+        private Button btnCores;
 
         @Nullable
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
             View view = inflater.inflate(R.layout.bt_test_layout, container, false);
+            btnCores = (Button) view.findViewById(R.id.btnCores);
 
             return view;
         }
@@ -50,8 +52,15 @@ public class AtividadeFragment extends Fragment {
         @Override
         public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
 
-            Intent intent = new Intent(view.getContext(), BluetoothChat.class);
-            startActivity(intent);
+            btnCores.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(view.getContext(), BluetoothChat.class);
+                    startActivity(intent);
+                }
+            });
+
+
         }
 
 
