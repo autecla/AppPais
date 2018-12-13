@@ -124,8 +124,8 @@ public class ActivitySeq extends AppCompatActivity {
                 case MESSAGE_READ:
                     byte[] readBuf = (byte[]) msg.obj;
 
-                    String readMessage = new String(readBuf, 0, msg.arg1);
-                    if(readMessage.length() > 1 && !readMessage.equals(" ")) {
+                    String readMessage = (String) msg.obj;
+                    if(readMessage.length() > 1) {
                         chatMessages.add("Recebido:  " + readMessage);
                         chatAdapter.notifyDataSetChanged();
                     }
