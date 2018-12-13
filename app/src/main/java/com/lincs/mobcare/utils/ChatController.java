@@ -60,7 +60,7 @@ public class ChatController {
     // Set the current state of the chat connection
     private synchronized void setState(int state) {
         this.state = state;
-        handler.obtainMessage(BluetoothChat.MESSAGE_STATE_CHANGE, state, -1).sendToTarget();
+        handler.obtainMessage(ActivityCores.MESSAGE_STATE_CHANGE, state, -1).sendToTarget();
     }
 
     // get current connection state
@@ -139,9 +139,9 @@ public class ChatController {
         connectedThread.start();
 
         // Send the name of the connected device back to the UI Activity
-        Message msg = handler.obtainMessage(BluetoothChat.MESSAGE_DEVICE_OBJECT);
+        Message msg = handler.obtainMessage(ActivityCores.MESSAGE_DEVICE_OBJECT);
         Bundle bundle = new Bundle();
-        bundle.putParcelable(BluetoothChat.DEVICE_OBJECT, device);
+        bundle.putParcelable(ActivityCores.DEVICE_OBJECT, device);
         msg.setData(bundle);
         handler.sendMessage(msg);
 
@@ -181,7 +181,7 @@ public class ChatController {
     }
 
     private void connectionFailed() {
-        Message msg = handler.obtainMessage(BluetoothChat.MESSAGE_TOAST);
+        Message msg = handler.obtainMessage(ActivityCores.MESSAGE_TOAST);
         Bundle bundle = new Bundle();
         bundle.putString("toast", "Unable to connect device");
         msg.setData(bundle);
@@ -192,7 +192,7 @@ public class ChatController {
     }
 
     private void connectionLost() {
-        Message msg = handler.obtainMessage(BluetoothChat.MESSAGE_TOAST);
+        Message msg = handler.obtainMessage(ActivityCores.MESSAGE_TOAST);
         Bundle bundle = new Bundle();
         bundle.putString("toast", "Device connection was lost");
         msg.setData(bundle);
@@ -350,7 +350,7 @@ public class ChatController {
                     bytes = inputStream.read(buffer);
 
                     // Send the obtained bytes to the UI Activity
-                    handler.obtainMessage(BluetoothChat.MESSAGE_READ, bytes, -1,
+                    handler.obtainMessage(ActivityCores.MESSAGE_READ, bytes, -1,
                             buffer).sendToTarget();
                     Log.d(TAG, "MESSAGE: " +    new String(buffer, 0, bytes));
                 } catch (IOException e) {
@@ -366,7 +366,7 @@ public class ChatController {
         public void write(byte[] buffer) {
             try {
                 outputStream.write(buffer);
-                handler.obtainMessage(BluetoothChat.MESSAGE_WRITE, -1, -1,
+                handler.obtainMessage(ActivityCores.MESSAGE_WRITE, -1, -1,
                         buffer).sendToTarget();
             } catch (IOException e) {
             }

@@ -7,52 +7,17 @@
     tools:context=".utils.ActivityCores">
 
     <Button
-        android:id="@+id/btnVerde"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:layout_below="@+id/textMessage"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="68dp"
-        android:backgroundTint="@android:color/holo_green_light"
-        android:text="Verde" />
-
-    <Button
-        android:id="@+id/btnAzul"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:layout_below="@+id/textMessage"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="180dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="30dp"
-        android:backgroundTint="@android:color/holo_blue_light"
-        android:text="Azul" />
-
-    <Button
-        android:id="@+id/btnAmarelo"
+        android:id="@+id/btnInitSeq"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="180dp"
-        android:layout_marginTop="143dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="105dp"
         android:backgroundTint="@android:color/holo_orange_light"
-        android:text="Amarelo" />
-
-    <Button
-        android:id="@+id/btnVermelho"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="143dp"
-        android:backgroundTint="@android:color/holo_red_light"
-        android:text="Vermelho" />
+        android:text="Gravar Seqência" />
 
     <ListView
         android:id="@+id/list"
@@ -61,29 +26,31 @@
         android:layout_below="@+id/btnAzul"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="33dp"
         android:layout_marginTop="188dp"
         android:layout_marginEnd="33dp"
+        android:layout_marginBottom="90dp"
         android:background="@color/colorSintomaChoro" />
 
     <Button
         android:id="@+id/btn_connect"
-        android:layout_width="wrap_content"
+        android:layout_width="104dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnAzul"
+        android:layout_below="@+id/textView5"
         android:layout_alignBottom="@+id/titleDispPareados"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="105dp"
-        android:layout_marginEnd="135dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="128dp"
         android:layout_marginBottom="-73dp"
         android:text="Conectar" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="168dp"
-        android:layout_height="39dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -91,7 +58,7 @@
         android:layout_marginTop="18dp"
         android:layout_marginEnd="97dp"
         android:gravity="center"
-        android:text="Atividade das Cores"
+        android:text="Atividade da Sequência"
         android:textSize="18sp" />
 
     <TextView

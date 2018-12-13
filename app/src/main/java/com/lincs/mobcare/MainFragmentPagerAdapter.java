@@ -23,8 +23,6 @@ public class MainFragmentPagerAdapter extends FragmentPagerAdapter implements Ac
         super(fm);
         fragments = new ArrayList<>();
         fragments.add(new ProfileFragment());
-        fragments.add(new SchedulerFragment());
-        fragments.add(new EvolutionFragment());
         fragments.add(new NoticeFragment());
         fragments.add(new AtividadeFragment());
     }
@@ -53,12 +51,8 @@ public class MainFragmentPagerAdapter extends FragmentPagerAdapter implements Ac
             case 0:
                 return "Perfil";
             case 1:
-                return "Consultas";
-            case 2:
-                return "-";
-            case 3:
                 return "Rotina";
-            case 4:
+            case 2:
                 return "Atividades";
 
         }

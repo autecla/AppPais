@@ -33,9 +33,9 @@ import com.lincs.mobcare.utils.Snapshot;
 
 import java.util.Objects;
 
-import static android.content.ContentValues.TAG;
 
 public class DailyActivity extends AppCompatActivity {
+    private static final String TAG = "DailyActivity: ";
     private Context context;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;

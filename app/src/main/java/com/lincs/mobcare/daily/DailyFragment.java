@@ -10,6 +10,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +29,7 @@ import java.util.Objects;
 
 public class DailyFragment extends Fragment implements AdapterCallback, SwipeRefreshLayout.OnRefreshListener {
 
+    private static final String TAG = "DailyFragment: ";
     private ArrayList<  Realiza> mEvolution = new ArrayList<>();
     private ArrayList<  Apresenta> mSymptom;
     SwipeRefreshLayout swipeLayout;
@@ -69,6 +71,7 @@ public class DailyFragment extends Fragment implements AdapterCallback, SwipeRef
 
         mEvSympDay = new ArrayList<>();
         splitThroughDays();
+        Log.d(TAG, "OnCreateView");
 
         if (mEvSympDay.isEmpty()) {
             recyclerView.setVisibility(View.GONE);

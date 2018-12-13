@@ -166,14 +166,6 @@ public class MainActivity extends AppCompatActivity {
         Objects.requireNonNull(tabLayout.getTabAt(2)).setIcon(imageResId[2]);
         tabIconColor = ContextCompat.getColor(this, R.color.cyan_300);
         Objects.requireNonNull(Objects.requireNonNull(tabLayout.getTabAt(2)).getIcon()).setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
-
-        Objects.requireNonNull(tabLayout.getTabAt(3)).setIcon(imageResId[3]);
-        tabIconColor = ContextCompat.getColor(this, R.color.cyan_300);
-        Objects.requireNonNull(Objects.requireNonNull(tabLayout.getTabAt(3)).getIcon()).setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
-
-        Objects.requireNonNull(tabLayout.getTabAt(4)).setIcon(imageResId[4]);
-        tabIconColor = ContextCompat.getColor(this, R.color.cyan_300);
-        Objects.requireNonNull(Objects.requireNonNull(tabLayout.getTabAt(4)).getIcon()).setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -190,14 +182,6 @@ public class MainActivity extends AppCompatActivity {
         Objects.requireNonNull(tabLayout.getTabAt(2)).setIcon(imageResId[2]);
         tabIconColor = ContextCompat.getColor(this, R.color.cyan_300);
         Objects.requireNonNull(Objects.requireNonNull(tabLayout.getTabAt(2)).getIcon()).setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
-
-        Objects.requireNonNull(tabLayout.getTabAt(3)).setIcon(imageResId[3]);
-        tabIconColor = ContextCompat.getColor(this, R.color.cyan_300);
-        Objects.requireNonNull(Objects.requireNonNull(tabLayout.getTabAt(3)).getIcon()).setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
-
-        Objects.requireNonNull(tabLayout.getTabAt(4)).setIcon(imageResId[4]);
-        tabIconColor = ContextCompat.getColor(this, R.color.cyan_300);
-        Objects.requireNonNull(Objects.requireNonNull(tabLayout.getTabAt(4)).getIcon()).setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
 
     }
 

@@ -39,7 +39,7 @@
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".utils.BluetoothChat"
+            android:name=".utils.ActivityCores"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
@@ -75,6 +75,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/MainTheme" />
         <activity
+            android:name=".utils.ActivitySeq"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".authentication.signup.SignUpAngelEditActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
@@ -88,10 +92,6 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".utils.AudioRecord"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".daily.AtividadeCorActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
 

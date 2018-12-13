@@ -31,9 +31,9 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.Set;
 
-public class BluetoothChat extends AppCompatActivity {
+public class ActivityCores extends AppCompatActivity {
 
-    private static final String TAG = "BluetoothChat: ";
+    private static final String TAG = "ActivityCores: ";
     private Button btnConnect;
     private Button btnVermelho, btnAmarelo, btnVerde, btnAzul;
     private ListView listView;
@@ -74,9 +74,6 @@ public class BluetoothChat extends AppCompatActivity {
         btnConnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
-                //discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
-                //startActivity(discoverableIntent);
                 showPrinterPickDialog();
             }
         });
