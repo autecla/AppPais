@@ -12,6 +12,7 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -36,6 +37,7 @@ public class ActivityCores extends AppCompatActivity {
     private static final String TAG = "ActivityCores: ";
     private Button btnConnect;
     private Button btnVermelho, btnAmarelo, btnVerde, btnAzul;
+    private FloatingActionButton btnFim;
     private ListView listView;
     private Dialog dialog;
     private TextView status;
@@ -119,8 +121,8 @@ public class ActivityCores extends AppCompatActivity {
                 case MESSAGE_READ:
                     byte[] readBuf = (byte[]) msg.obj;
 
-                    String readMessage = new String(readBuf, 0, msg.arg1);
-                    if(readMessage.length() > 1 && !readMessage.equals(" ")) {
+                    String readMessage = (String) msg.obj;
+                    if(readMessage.length() > 1) {
                         chatMessages.add("Recebido:  " + readMessage);
                         chatAdapter.notifyDataSetChanged();
                     }
@@ -260,6 +262,7 @@ public class ActivityCores extends AppCompatActivity {
         btnAmarelo = (Button) findViewById(R.id.btnAmarelo);
         btnAzul = (Button) findViewById(R.id.btnAzul);
         btnVerde = (Button) findViewById(R.id.btnVerde);
+        btnFim = (FloatingActionButton) findViewById(R.id.btnFim);
 
         listView = (ListView) findViewById(R.id.list);
         status = (TextView) findViewById(R.id.status);
@@ -290,6 +293,13 @@ public class ActivityCores extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sendMessage("azul\r\n");
+            }
+        });
+
+        btnFim.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendMessage("fim\r\n");
             }
         });
     }

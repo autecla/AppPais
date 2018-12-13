@@ -12,6 +12,7 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -32,7 +33,8 @@ import java.util.Set;
 public class ActivitySeq extends AppCompatActivity {
 
     private static final String TAG = "ActivitySeq: ";
-    private Button btnConnect;
+    private Button btnInitSeq;
+    private FloatingActionButton btnFim;
     private ListView listView;
     private Dialog dialog;
     private TextView status;
@@ -68,10 +70,16 @@ public class ActivitySeq extends AppCompatActivity {
         }
 
         //show bluetooth devices dialog when click connect button
-        btnConnect.setOnClickListener(new View.OnClickListener() {
+        btnInitSeq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showPrinterPickDialog();
+            }
+        });
+        btnFim.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendMessage("fim\r\n");
             }
         });
 
@@ -90,19 +98,19 @@ public class ActivitySeq extends AppCompatActivity {
                     switch (msg.arg1) {
                         case ChatController.STATE_CONNECTED:
                             setStatus("Conectado a: " + connectingDevice.getName());
-                            btnConnect.setEnabled(false);
+                            btnInitSeq.setEnabled(false);
                             Log.d(TAG, "Conectado a: " + connectingDevice.getName());
                             break;
                         case ChatController.STATE_CONNECTING:
                             setStatus("Conectando...");
                             Log.d(TAG, "Conectando a ... ");
-                            btnConnect.setEnabled(false);
+                            btnInitSeq.setEnabled(false);
                             break;
                         case ChatController.STATE_LISTEN:
                         case ChatController.STATE_NONE:
                             setStatus("Sem conexão");
                             Log.d(TAG, "nao foi");
-                            btnConnect.setEnabled(true);
+                            btnInitSeq.setEnabled(true);
                             break;
                     }
                     break;
@@ -252,7 +260,8 @@ public class ActivitySeq extends AppCompatActivity {
     private void findViewsByIds() {
         //status = (TextView) findViewById(R.id.status);
 
-        btnConnect = (Button) findViewById(R.id.btn_connect);
+        btnInitSeq = (Button) findViewById(R.id.btnInitSeq);
+        btnFim = (FloatingActionButton) findViewById(R.id.btnFim);
 
         listView = (ListView) findViewById(R.id.list);
         status = (TextView) findViewById(R.id.status);

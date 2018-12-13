@@ -342,17 +342,22 @@ public class ChatController {
         public void run() {
             byte[] buffer = new byte[1024];
             int bytes;
+            StringBuilder readMessage = new StringBuilder();
 
             // Keep listening to the InputStream
             while (true) {
                 try {
                     // Read from the InputStream
                     bytes = inputStream.read(buffer);
+                    String read = new String(buffer, 0, bytes);
+                    readMessage.append(read);
 
                     // Send the obtained bytes to the UI Activity
-                    handler.obtainMessage(ActivityCores.MESSAGE_READ, bytes, -1,
-                            buffer).sendToTarget();
-                    Log.d(TAG, "MESSAGE: " +    new String(buffer, 0, bytes));
+                    if (read.contains("\n")) {
+                        handler.obtainMessage(ActivityCores.MESSAGE_READ, bytes, -1, readMessage.toString()).sendToTarget();
+                        Log.d(TAG, "MESSAGE: " + new String(buffer, 0, bytes));
+                        readMessage.setLength(0);
+                    }
                 } catch (IOException e) {
                     connectionLost();
                     // Start the service over to restart listening mode
