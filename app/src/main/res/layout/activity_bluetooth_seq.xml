@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".utils.ActivityCores">
 
@@ -75,26 +76,26 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center"
-        android:layout_marginStart="277dp"
-        android:layout_marginBottom="49dp"
+        android:layout_marginStart="291dp"
+        android:layout_marginBottom="395dp"
         android:elevation="16dp"
         android:text="FIM"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/mdtp_done_text_color_dark_normal"
-        android:textSize="24dp" />
+        android:textColor="@color/mdtp_done_text_color_dark_normal" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btnFim"
+        android:id="@+id/btnEnd"
         android:layout_width="83dp"
         android:layout_height="79dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="254dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginStart="266dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="368dp"
         android:clickable="true"
         android:src="@android:color/transparent"
-        android:backgroundTint="@color/cyan_300" />
+        app:backgroundTint="@color/cyan_300" />
+
 
 </RelativeLayout>

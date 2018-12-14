@@ -123,7 +123,8 @@ public class ActivityCores extends AppCompatActivity {
 
                     String readMessage = (String) msg.obj;
                     if(readMessage.length() > 1) {
-                        chatMessages.add("Recebido:  " + readMessage);
+                        String fullMsg = "Recebido: " + readMessage;
+                        chatMessages.add(fullMsg);
                         chatAdapter.notifyDataSetChanged();
                     }
                     break;

@@ -97,8 +97,8 @@
 
     <TextView
         android:id="@+id/status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="127dp"
+        android:layout_height="30dp"
         android:layout_above="@+id/btn_connect"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="-105dp" />
@@ -110,13 +110,12 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center"
-        android:layout_marginStart="277dp"
-        android:layout_marginBottom="49dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginBottom="323dp"
         android:elevation="16dp"
         android:text="FIM"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/mdtp_done_text_color_dark_normal"
-        android:textSize="24dp" />
+        android:textColor="@color/mdtp_done_text_color_dark_normal" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/btnFim"
@@ -125,9 +124,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="254dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="298dp"
         android:clickable="true"
         android:src="@android:color/transparent"
         app:backgroundTint="@color/cyan_300" />
