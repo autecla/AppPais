@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -10,27 +11,58 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
 
-    <Button
+    <ImageButton
         android:id="@+id/btnCores"
-        android:layout_width="162dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="81dp"
-        android:layout_marginEnd="107dp"
-        android:text="Atividade Cores" />
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/coloractivity" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnSeq"
-        android:layout_width="162dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnCores"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="107dp"
-        android:text="Atividade Sequência" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="70dp"
+        app:srcCompat="@drawable/seqactivity" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="179dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnCores"
+        android:layout_alignTop="@+id/btnCores"
+        android:layout_alignEnd="@+id/btnCores"
+        android:layout_alignBottom="@+id/btnCores"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="193dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="22dp"
+        android:text="Atividade das Cores"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="179dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnCores"
+        android:layout_alignTop="@+id/btnSeq"
+        android:layout_alignEnd="@+id/btnCores"
+        android:layout_alignBottom="@+id/btnCores"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="198dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="-294dp"
+        android:text="Atividade da Sequência"
+        android:textStyle="bold" />
+
 </RelativeLayout>
