@@ -23,16 +23,16 @@
 
     <ImageButton
         android:id="@+id/btnSeq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="313dp"
+        android:layout_height="253dp"
         android:layout_below="@+id/btnCores"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="16dp"
         android:layout_marginTop="78dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="60dp"
         app:srcCompat="@drawable/seqactivity" />
 
     <TextView
@@ -43,10 +43,10 @@
         android:layout_alignTop="@+id/btnCores"
         android:layout_alignEnd="@+id/btnCores"
         android:layout_alignBottom="@+id/btnCores"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="193dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="23dp"
         android:text="Atividade das Cores"
         android:textStyle="bold" />
 
@@ -57,12 +57,29 @@
         android:layout_alignStart="@+id/btnCores"
         android:layout_alignTop="@+id/btnSeq"
         android:layout_alignEnd="@+id/btnCores"
-        android:layout_alignBottom="@+id/btnCores"
-        android:layout_marginStart="94dp"
-        android:layout_marginTop="198dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginBottom="-294dp"
+        android:layout_alignBottom="@+id/btnSeq"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="5dp"
         android:text="Atividade da Sequência"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnSeq"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="247dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/cyan_300"
+        android:text=" Cadastrar nova atividade"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="14sp" />
 
 </RelativeLayout>

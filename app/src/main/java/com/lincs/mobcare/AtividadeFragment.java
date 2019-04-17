@@ -9,20 +9,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.lincs.mobcare.utils.ActivityCores;
 import com.lincs.mobcare.utils.ActivitySeq;
 
 public class AtividadeFragment extends Fragment {
-        private Button btnCores, btnSeq;
+        private ImageButton  btnSeq, btnCores;
 
         @Nullable
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
             View view = inflater.inflate(R.layout.atividade_fragment_layout, container, false);
-            btnCores = (Button) view.findViewById(R.id.btnCores);
-            btnSeq = (Button) view.findViewById(R.id.btnSeq);
+            btnCores = (ImageButton) view.findViewById(R.id.btnCores);
+            btnSeq = (ImageButton) view.findViewById(R.id.btnSeq);
 
             return view;
         }
